@@ -1,0 +1,14 @@
+$themeName: 'star';
+$layoutBackgroundColor: #215d91;
+$layoutColor: #fff;
+$mainBackgroundColor: #fff;
+$mainColor: #000;
+$tabListBackgroundColor:#4d7da7;
+$tabListColor:#fff;
+$activeTabBackgroundColor:#fff;
+$activeTabColor:#666;
+$backgroundImg:"/image/theme/star/bg.jpg";
+$menuBackgroundColor:$layoutBackgroundColor;
+$menuColor:$layoutColor;
+$menuActiveColor:#ffd04b;
+@import './setting.scss'

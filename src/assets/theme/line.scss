@@ -1,0 +1,14 @@
+$themeName: 'line';
+$layoutBackgroundColor: #f8f8f9;
+$layoutColor: #666;
+$mainBackgroundColor: #fff;
+$mainColor: #000;
+$tabListBackgroundColor:#CFD7E5;
+$tabListColor:#fff;
+$activeTabBackgroundColor:#fff;
+$activeTabColor:rgb(143, 141, 141);
+$backgroundImg:"/image/theme/line/bg.jpg";
+$menuBackgroundColor:$layoutBackgroundColor;
+$menuColor:$layoutColor;
+$menuActiveColor:#ffd04b;
+@import './setting.scss'

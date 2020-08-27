@@ -1,0 +1,14 @@
+$themeName: 'druk';
+$layoutBackgroundColor: #324157;
+$layoutColor: #fff;
+$mainBackgroundColor: #fff;
+$mainColor: #000;
+$tabListBackgroundColor:#324157;
+$tabListColor:#fff;
+$activeTabBackgroundColor:#fff;
+$activeTabColor:#666;
+$backgroundImg:null;
+$menuBackgroundColor:$layoutBackgroundColor;
+$menuColor:$layoutColor;
+$menuActiveColor:#ffd04b;
+@import './setting.scss'

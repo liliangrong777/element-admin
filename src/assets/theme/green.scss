@@ -1,0 +1,14 @@
+$themeName: 'green';
+$layoutBackgroundColor: #07C4A8;
+$layoutColor: #fff;
+$mainBackgroundColor: #fff;
+$mainColor: #000;
+$tabListBackgroundColor:#07C4A8;
+$tabListColor:#fff;
+$activeTabBackgroundColor:#fff;
+$activeTabColor:#666;
+$backgroundImg:null;
+$menuBackgroundColor:$layoutBackgroundColor;
+$menuColor:$layoutColor;
+$menuActiveColor:#ffd04b;
+@import './setting.scss'

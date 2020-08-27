@@ -1,0 +1,145 @@
+$fontSize: 16px;
+@function opacity(){
+  @if $backgroundImg {
+    @return 0.8;
+  } 
+  @return 1;
+};
+
+.#{$themeName} {
+  #layout {
+    @if $backgroundImg{
+      background: url($backgroundImg) no-repeat center 0;
+      background-attachment: fixed;
+      background-size: cover;
+    } @else{
+      background-color: $layoutBackgroundColor;
+    }
+    height: 100vh;
+    color: $layoutColor;
+    & > .header {
+      opacity: opacity();
+      background-color: $layoutBackgroundColor;
+      display: flex;
+      height: 60px;
+      line-height: 60px;
+      .left {
+        width: 180px;
+        text-align: center;
+      }
+      .center {
+        flex: 1;
+        display: flex;
+        .center-left{
+          font-size: 30px;
+          width: 200px;
+        }
+        .center-right{
+          flex: 1;
+          display: flex;
+          justify-content: flex-end;
+          padding-right: 20px;
+        }
+        
+      }
+      .right {
+        width: 100px;
+        text-align: center;
+        font-size: 14px;
+        cursor: pointer;
+        color: $layoutColor;
+        &:hover{
+          color:#aaa;
+        }
+      }
+    }
+    & > .center {
+      display: flex;
+      .container {
+        opacity: opacity();
+        background-color: $mainBackgroundColor;
+        color: $mainColor;
+        height: calc(100vh - 60px);
+        width: 100%;
+        & > .header {
+          height: 40px;
+          background-color: $layoutBackgroundColor;
+          display: flex;
+          justify-content: space-between;
+          .tab-list {
+            background-color: $tabListBackgroundColor;
+            color: $tabListColor;
+          }
+        }
+        & > .main {
+          padding: 20px;
+          font-size: 16px;
+          height: calc(100vh - 100px);
+        }
+      }
+    }
+  }
+  //左侧el-menu样式
+  .el-menu {
+    border-right-width: 0px;
+    background-color: $menuBackgroundColor;
+    .el-submenu__title{
+      padding-left: 20px !important;
+      color: $menuColor;
+    }
+    .el-menu-item{
+        padding-left: 40px !important;
+        color:$menuColor;
+    }
+    .el-submenu-item-menu{
+      padding-left: 20px !important;
+      color: $menuColor;
+    }
+    .is-active{
+        color:$menuActiveColor;
+    }
+  }
+  .el-menu-vertical-demo:not(.el-menu--collapse) {
+    opacity: opacity();
+    width: 200px;
+    overflow: hidden;
+    min-height: 400px;
+  }
+  // 顶栏el-tab样式
+  .tab-list {
+    .el-tabs__item {
+      font-size: 15px !important;
+      border-left: 1px solid $layoutBackgroundColor !important;
+      border-bottom: 1px solid $tabListBackgroundColor !important;
+      font-weight: 600;
+      color: $tabListColor;
+      &:nth-child(1) {
+        border-left: 0 !important;
+      }
+    }
+    .is-active {
+      background-color: $activeTabBackgroundColor;
+      color: $activeTabColor;
+      border-bottom: 1px solid $activeTabBackgroundColor !important;
+    }
+    .el-tabs__nav {
+      border: 0 !important;
+    }
+  }
+  .tab-option {
+    .el-button {
+      border-bottom: 0;
+    }
+  }
+  //顶栏 icon样式
+  .header-icon{
+    background-color:transparent;
+    border: 0;
+    font-size: 25px;
+    color: $layoutColor;
+    &:hover{
+      background-color:rgba($color: #eee, $alpha: 0.5);
+      color:$menuActiveColor;
+    }
+  }
+}
